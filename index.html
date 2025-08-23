@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Filmes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="https://unpkg.com/notie/dist/notie.min.css">
+    <script src="https://unpkg.com/notie"></script>
+</head>
+
+<body>
+    <header> 
+        <h1><i class="bi bi-film"></i> Tela & Trama</h1>
+        <section id="search-conteiner">
+            <div class="input-nome-filme">
+                <label for="nome-filme">Nome:</label>
+                <input type="text" id="nome-filme">
+            </div>
+
+            <div class="input-ano-filme">
+                <label for="ano-filme">Ano:</label>
+                <input type="text" name="Ano do Filmes" id="ano-filme">
+            </div>
+
+            <button id="search-button">
+                <i class="bi bi-search-heart-fill"></i>
+            </button>
+        </section>
+    </header>
+
+    <main>
+        <h2>Comece sua lista de filmes</h2>
+
+        <section id="movie-list">
+            <article>
+                
+            </article>
+            
+        </section>
+
+
+        <article id="modal-overlay">
+            <section id="modal-background"></section>
+            <section id="modal-conteiner">
+                <h2 id="movie-title">Titulo do filme</h2>
+                <h3 id="movie-year">Ano Do filme</h3>
+
+                <section id="modal-body">
+                    <img id="movie-poster" src="https://m.media-amazon.com/images/M/MV5BMjM3NzQ5NDcxOF5BMl5BanBnXkFtZTgwNzM4MTQ5NTM@._V1_SX300.jpg" alt="Poster do filme">
+                    
+                    <div id="movie-info"> 
+                        <div id="movie-plot">
+                            <h3>A priest with a haunted past and a novice on the threshold of her final vows are sent by the Vatican to investigate the death of a young nun in Romania and confront a malevolent force in the form of a demonic nun.</h3>
+                        </div>
+
+                        <div id="movie-cast">
+                            <h5>Elenco:</h5> 
+                            <h4>Demián Bichir, Taissa Farmiga, Jonas Bloquet</h4>
+                        </div>
+
+                        <div id="movie-genre">
+                            <h4 class="genero-filme">Gênero:</h4>
+                            <h5>Horror, Mystery, Thriller</h5>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="modal-footer">
+                    <button id="add-to-list">Adicionar à Lista</button>
+                </section>
+            </section>
+        </article>
+    </main>
+
+    <script src="modal.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

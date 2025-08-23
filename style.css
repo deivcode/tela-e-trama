@@ -1,0 +1,213 @@
+/*--------------------------------------------------------------------------
+     ESTILOS
+   --------------------------------------------------------------------------*/
+:root {
+    --cor-fundo: #F0F2F5;
+    --cor-header: #16213e;
+    --cor-card-bg: #FFFFFF;
+    --cor-texto: #1c1e21;
+    --cor-texto-secundario: #65676B;
+    --cor-card-border: #e4e6eb;
+
+    --cor-destaque-1: #21e6c1;
+    --cor-destaque-2: #f9d923;
+    --cor-danger: #ff2e63;
+    
+    --fonte-titulo: 'Montserrat', Arial, sans-serif;
+    --fonte-texto: 'Inter', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte-texto);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-size: 1.08rem;
+    color: var(--cor-texto);
+    background: var(--cor-fundo);
+    min-height: 100dvh;
+}
+
+main {
+    text-align: center;
+    padding: 2rem 1rem;
+    flex-grow: 1;
+}
+
+h1 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    font-weight: 800;
+}
+
+h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+/*--------------------------------------------------------------------------
+      CABEÇALHO E PESQUISA
+   --------------------------------------------------------------------------*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1rem 2rem 1rem;
+    background: var(--cor-header);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #FFFFFF;
+}
+
+header label {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+#search-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#nome-filme, #ano-filme {
+    border-radius: 20px;
+    padding: 0.7rem 1.2rem;
+    font-weight: 500;
+    border: 1px solid var(--cor-card-border);
+    background: #FFFFFF;
+    color: var(--cor-texto);
+    font-size: 1rem;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+#nome-filme:focus, #ano-filme:focus {
+    outline: none;
+    border-color: var(--cor-destaque-1);
+    box-shadow: 0 0 0 3px rgba(33, 230, 193, 0.4);
+}
+
+#ano-filme {
+    width: 6rem;
+}
+
+#search-button {
+    all: unset;
+    padding: 0.7rem;
+    border-radius: 50%;
+    color: var(--cor-header);
+    background-color: var(--cor-destaque-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 12px #0002;
+}
+
+#search-button:hover {
+    transform: scale(1.1);
+    background-color: #FFFFFF;
+}
+
+/*--------------------------------------------------------------------------
+     LISTA DE FILMES E CARDS
+   --------------------------------------------------------------------------*/
+#movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.movie-card {
+    width: 220px;
+    background-color: var(--cor-card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--cor-card-border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.movie-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 330px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movie-card:hover::after {
+    opacity: 1;
+}
+
+.movie-card img {
+    width: 100%; 
+    height: 330px; 
+    object-fit: cover;
+}
+
+.remove-button {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    padding: 0.8rem 0;
+    z-index: 2;
+    border: 2px solid var(--cor-card-bg);
+    background-color: var(--cor-danger);
+    color: var(--cor-card-bg);
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.movie-card:hover .remove-button {
+    opacity: 1;
+    bottom: 15px;
+}
+
+.remove-button:hover {
+    background-color: var(--cor-card-bg);
+    color: var(--cor-danger);
+}
