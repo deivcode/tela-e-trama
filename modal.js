@@ -14,12 +14,6 @@ background.addEventListener('click', closeAndResetModal);
 
 // Função que cria o conteúdo do modal com os dados do filme
 function createModal(data) {
-    // --- Lógica para encontrar o trailer oficial ---
-    // Procura na lista de vídeos por um que seja do tipo "Trailer" e do site "YouTube"
-    const trailer = data.videos?.results.find(video => video.type === 'Trailer' && video.site === 'YouTube');
-    const trailerKey = trailer ? trailer.key : null;
-
-    // --- Lógica para formatar os outros dados ---
     const genres = data.genres.map(genre => genre.name).join(', ');
     const cast = data.credits.cast.slice(0, 5).map(actor => actor.name).join(', ');
     const year = data.release_date ? data.release_date.split('-')[0] : 'Ano não informado';
@@ -48,22 +42,19 @@ function createModal(data) {
                 </div>
             </div>
         </section>
-        
         <section id="modal-footer">
-            ${trailerKey ? `<a href="https://www.youtube.com/watch?v=${trailerKey}" target="_blank" class="trailer-button">Ver Trailer</a>` : ''}
             <button id="add-to-list">Adicionar à Lista</button>
         </section>
     `;
     
-    // --- Adicionando as funcionalidades aos botões ---
 
-    // 1. Funcionalidade do botão de fechar "X"
+    // Funcionalidade do botão de fechar "X"
     const closeModalButton = document.getElementById('close-modal');
     closeModalButton.addEventListener('click', closeAndResetModal);
     
-    // 2. Funcionalidade do botão "Adicionar à Lista"
+    // Funcionalidade do botão "Adicionar à Lista"
     const addToListButton = document.getElementById('add-to-list');
     addToListButton.addEventListener('click', () => {
-        addToList(data); // Chama a função do script.js
+        addToList(data);
     });
 }
