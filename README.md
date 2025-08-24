@@ -29,7 +29,7 @@ Este projeto foi construído do zero, focando nas tecnologias essenciais do fron
     * `fetch` API com `async/await` para as requisições.
     * `localStorage` para a persistência de dados.
 
-## Você pode acessar diretamente pela internet por esse link :
+## Você pode acessar diretamente pela internet por esse link : https://deivcode.github.io/tela-e-trama/
 
 ## ou :
 
