@@ -59,8 +59,9 @@ Se você quiser explorar o código na sua máquina, é bem simples:
 Desenvolver o Tela & Trama foi uma jornada de novos conhecimentos , marca meu inicio na programação . Alguns dos pontos que mais me desenvolveram foram:
 
 * Aprofundar o uso de `async/await` para lidar com a natureza assíncrona das APIs.
-* Entender na prática a importância de proteger chaves de API, utilizando `.gitignore` e um arquivo de configuração separado.
-* Implementar um fluxo completo de CRUD (Create, Read, Delete) em uma lista de dados, com persistência no `localStorage` OBS: essa foi uma das parte mais magicas, tirando quando a api puxou os dados para o meu site.
+* Entender na prática a importância de proteger chaves de API, utilizando `.gitignore` e um arquivo de configuração separado. OBS : Nesse projeto como se trata de uma API de graça e com intuito so de procurar filmes
+  não vi problema em disponibilizar a minha só para o PAGEs do GitHub funcionar e você poder testar o site acessando pelo link .
+* Implementar um fluxo completo de Create, Read, Delete em uma lista de dados, com persistência no `localStorage` OBS: essa foi uma das parte mais magicas, tirando quando a api puxou os dados para o meu site.
 * Refinar a estilização e a experiência do usuário, pensando em responsividade e microinterações.
 
 ---
