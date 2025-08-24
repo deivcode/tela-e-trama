@@ -9,7 +9,6 @@ const movieListContainer = document.getElementById('movie-list');
 
 let movieList = [];
 
-const apiKey = 'ad311572269513cff97b0460120e7605'; 
 const imageBaseUrl = 'https://image.tmdb.org/t/p/w500';
 
 /*--------------------------------------------------------------------------
@@ -74,7 +73,7 @@ function exibirModal() {
     overlay.classList.add('open');
 }
 
-/*--------------------------------------------------------------------------
+/*------------------------------------------------------------------------
    LÓGICA DA API (TMDB)
    --------------------------------------------------------------------------*/
 async function searchButtonClickHandler() {
@@ -115,7 +114,7 @@ async function searchButtonClickHandler() {
 
 /*--------------------------------------------------------------------------
    EVENT LISTENERS (PESQUISA)
-   --------------------------------------------------------------------------*/
+   -----------------------------------------------------------------------*/
 searchButton.addEventListener('click', searchButtonClickHandler);
 movieNameInput.addEventListener('keydown', function(e) {
     if (e.key === 'Enter') searchButtonClickHandler();
@@ -124,7 +123,7 @@ movieYearInput.addEventListener('keydown', function(e) {
     if (e.key === 'Enter') searchButtonClickHandler();
 });
 
-/*--------------------------------------------------------------------------
+/*------------------------------------------------------------------------
    LISTA DE FILMES
    --------------------------------------------------------------------------*/
 
@@ -172,7 +171,7 @@ function removeFromList(movieId) {
 
 /*--------------------------------------------------------------------------
    INICIALIZAÇÃO DA PÁGINA
-   --------------------------------------------------------------------------*/
+   -----------------------------------------------------------------------*/
 document.addEventListener('DOMContentLoaded', () => {
     loadListFromLocalStorage();
     renderList();

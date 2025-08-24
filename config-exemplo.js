@@ -1,0 +1,1 @@
+const apiKey = 'coloque sua chave API aqui';

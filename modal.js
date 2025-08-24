@@ -1,5 +1,3 @@
-// modal.js
-
 const background = document.getElementById('modal-background');
 const modalContainer = document.getElementById('modal-conteiner');
 
@@ -12,7 +10,7 @@ function closeAndResetModal() {
 
 background.addEventListener('click', closeAndResetModal);
 
-// Função que cria o conteúdo do modal com os dados do filme
+// Funçao que cria o conteúdo do modal com os dados do filme
 function createModal(data) {
     const genres = data.genres.map(genre => genre.name).join(', ');
     const cast = data.credits.cast.slice(0, 5).map(actor => actor.name).join(', ');
@@ -48,11 +46,11 @@ function createModal(data) {
     `;
     
 
-    // Funcionalidade do botão de fechar "X"
+    // Funcionalidade do botão de fechar
     const closeModalButton = document.getElementById('close-modal');
     closeModalButton.addEventListener('click', closeAndResetModal);
     
-    // Funcionalidade do botão "Adicionar à Lista"
+    // Funcionalidade do botão "adicionar à lista"
     const addToListButton = document.getElementById('add-to-list');
     addToListButton.addEventListener('click', () => {
         addToList(data);

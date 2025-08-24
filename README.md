@@ -2,7 +2,7 @@
 
 ![Status do Projeto](https://img.shields.io/badge/status-concluído-green)
 
-Bem-vindo ao Tela & Trama! Este é um projeto que desenvolvi para aprofundar meus conhecimentos em desenvolvimento front-end, consumindo uma API real e criando uma experiência de usuário interativa e agradável. A ideia era simples: criar um lugar onde eu pudesse buscar filmes e salvar meus favoritos em uma lista persistente.
+Bem-vindo ao Tela & Trama! Este é um dos meus primeiros projetos como programador, criado durante um curso de JavaScript para aprofundar meus conhecimentos em desenvolvimento front-end. O objetivo era consumir uma API real e construir uma experiência de usuário interativa e prática. A proposta do Tela & Trama é simples: um espaço onde você pode buscar filmes e salvar seus favoritos em uma lista que permanece salva, mesmo depois de fechar o navegador. Tudo foi feito com objetivo de aprendizado .
 
 <br>
 
@@ -22,10 +22,16 @@ Bem-vindo ao Tela & Trama! Este é um projeto que desenvolvi para aprofundar meu
 Este projeto foi construído do zero, focando nas tecnologias essenciais do front-end:
 
 * **HTML5:** Para a estrutura semântica do conteúdo.
-* **CSS3:** Para a estilização, com uso de Flexbox, variáveis CSS e Media Queries para a responsividade.
+* **CSS3:** Para a estilização, com uso de Flexbox, variáveis CSS e Media Queries para a responsividade. Inicialmente o foco nao era na estetica do site
+  o foco era totalmente na linguagem de programção JavaScript , os detalhes e leves animações foram adicionados posteriormente junto com uma paleta de cores harmonicas
+  com ajuda de recursos da internet sobre estilização e documento de CSS.
 * **JavaScript (ES6+):** Para toda a interatividade, manipulação do DOM e lógica da aplicação, incluindo:
     * `fetch` API com `async/await` para as requisições.
     * `localStorage` para a persistência de dados.
+
+## Você pode acessar diretamente pela internet por esse link :
+
+## ou :
 
 ## 🚀 Como Rodar Localmente
 
@@ -33,7 +39,7 @@ Se você quiser explorar o código na sua máquina, é bem simples:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/SEU-USUARIO/tela-e-trama.git](https://github.com/SEU-USUARIO/tela-e-trama.git)
+    git clone https://github.com/deivcode/tela-e-trama.git
     ```
 
 2.  **Crie seu arquivo de configuração:**
@@ -41,19 +47,20 @@ Se você quiser explorar o código na sua máquina, é bem simples:
     * Crie uma cópia dele e renomeie para `config.js`.
 
 3.  **Adicione sua chave da API:**
-    * Você vai precisar de uma chave de API do TMDB. É grátis e você consegue [aqui](https://www.themoviedb.org/settings/api).
+    * Você vai precisar de uma chave de API do TMDB. É grátis e você consegue [aqui](https://www.themoviedb.org/settings/api). é bem rapidinho só colocar o email e senha e ele ja te envia sua API .
     * Abra o `config.js` que você criou e cole sua chave de API lá dentro.
 
 4.  **Pronto!**
     * Agora é só abrir o arquivo `index.html` no seu navegador.
 
+
 ## 🧠 Principais Aprendizados
 
-Desenvolver o Tela & Trama foi uma jornada incrível. Alguns dos pontos que mais me desenvolveram foram:
+Desenvolver o Tela & Trama foi uma jornada de novos conhecimentos , marca meu inicio na programação . Alguns dos pontos que mais me desenvolveram foram:
 
 * Aprofundar o uso de `async/await` para lidar com a natureza assíncrona das APIs.
 * Entender na prática a importância de proteger chaves de API, utilizando `.gitignore` e um arquivo de configuração separado.
-* Implementar um fluxo completo de CRUD (Create, Read, Delete) em uma lista de dados, com persistência no `localStorage`.
+* Implementar um fluxo completo de CRUD (Create, Read, Delete) em uma lista de dados, com persistência no `localStorage` OBS: essa foi uma das parte mais magicas, tirando quando a api puxou os dados para o meu site.
 * Refinar a estilização e a experiência do usuário, pensando em responsividade e microinterações.
 
 ---
