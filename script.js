@@ -29,6 +29,10 @@ function loadListFromLocalStorage() {
 function renderList() {
     movieListContainer.innerHTML = '';
     if (movieList.length > 0) {
+        const initialMessage = document.getElementById('initial-message');
+        if (initialMessage) {
+            initialMessage.remove();
+        }
         movieList.forEach(movie => {
             updateUI(movie);
         });
@@ -133,7 +137,7 @@ function addToList(movieObject) {
         return;
     }
     movieList.push(movieObject);
-    updateUI(movieObject);
+    renderList();
     saveListToLocalStorage();
     overlay.classList.remove('open');
 }
@@ -142,6 +146,11 @@ function updateUI(movieObject) {
     const emptyState = document.querySelector('.empty-state');
     if (emptyState) {
         emptyState.remove();
+    }
+
+    const initialMessage = document.getElementById('initial-message');
+    if (initialMessage) {
+        initialMessage.remove();
     }
 
     movieListContainer.innerHTML += `
